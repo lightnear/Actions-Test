@@ -25,9 +25,9 @@ jobs:
     steps:
       - name: free spaces
         run: |
-          echo $PWD
-          ls -l $PWD
-          df -hT
+          cd /
+          df -h -d 1
+          
 
       - name: Checkout
         uses: actions/checkout@v2
