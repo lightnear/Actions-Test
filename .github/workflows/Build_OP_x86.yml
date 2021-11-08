@@ -26,8 +26,8 @@ jobs:
       - name: free spaces
         run: |
           cd /
-          df -h -d 1
-          
+          du -h -d 1
+
 
       - name: Checkout
         uses: actions/checkout@v2
