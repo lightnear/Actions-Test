@@ -37,7 +37,8 @@ jobs:
         with:
           repository: coolsnowwolf/lede
           ref: master
-          
+          path: openwrt
+
       - name: free spaces 2
         run: |
           echo $PWD
