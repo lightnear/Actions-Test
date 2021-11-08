@@ -35,9 +35,9 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: ${{ REPO_URL }}
-          ref: ${{ REPO_BRANCH }}
-
+          repository: coolsnowwolf/lede
+          ref: master
+          
       - name: free spaces 2
         run: |
           echo $PWD
