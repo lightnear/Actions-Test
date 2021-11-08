@@ -35,8 +35,8 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v2
         with:
-          repository: $REPO_URL
-          ref: $REPO_BRANCH
+          repository: ${{ REPO_URL }}
+          ref: ${{ REPO_BRANCH }}
 
       - name: free spaces 2
         run: |
