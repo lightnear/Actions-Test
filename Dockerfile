@@ -19,7 +19,7 @@ RUN sed -i 's|archive.ubuntu.com|mirrors.aliyun.com|g' /etc/apt/sources.list \
     && apt install -y bc snmp snmp-mibs-downloader ipmitool iperf3 \
     && apt-get install -y python3-pip \
     && pip3 install --upgrade pip \
-    && apt-get remove python3-pip \
+    && apt-get -y remove python3-pip \
     && rm -rf /var/lib/apt/lists/* \
     && pip install requests \
     && pip install --upgrade requests
