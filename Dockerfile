@@ -17,7 +17,7 @@ RUN sed -i 's|archive.ubuntu.com|mirrors.aliyun.com|g' /etc/apt/sources.list \
     && localedef -i en_US -c -f UTF-8 -A /usr/share/locale/locale.alias en_US.UTF-8 \
     && apt install -y openssh-client rsync curl wget sudo git bzip2 \
     && apt install -y bc snmp snmp-mibs-downloader ipmitool iperf3 \
-    && apt-get install -y python-pip \
+    && apt-get install -y python3-pip \
     && pip3 install --upgrade pip \
     && apt-get remove python3-pip \
     && rm -rf /var/lib/apt/lists/* \
