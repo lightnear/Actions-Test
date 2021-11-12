@@ -47,7 +47,7 @@ jobs:
       - name: Build and push
         uses: docker/build-push-action@v2
         with:
-          context: ./Dockerfiles/server-mysql/ubuntu
+          context: ./zabbix-docker/Dockerfiles/server-mysql/ubuntu
           push: ${{ github.event_name != 'pull_request' }}
           tags: ${{ steps.meta.outputs.tags }}
           labels: ${{ steps.meta.outputs.labels }}
