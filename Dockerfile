@@ -19,7 +19,7 @@ RUN sed -i 's|archive.ubuntu.com|mirrors.aliyun.com|g' /etc/apt/sources.list \
     && apt-get install -y python3-pip \
     && pip3 install --upgrade pip \
     && apt-get -y remove python3-pip \
-    && apt-get autoremove \
+    && apt-get -y autoremove \
     && rm -rf /var/lib/apt/lists/* \
     && pip install requests \
     && pip install --upgrade requests
