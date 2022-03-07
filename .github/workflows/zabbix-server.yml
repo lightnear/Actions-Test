@@ -1,4 +1,4 @@
-name: zabbix-server
+name: test
 
 on:
   schedule:
@@ -78,11 +78,11 @@ jobs:
           cache-from: type=registry,ref=${{ env.IMAGE }}:buildcache
           cache-to: type=registry,ref=${{ env.IMAGE }}:buildcache,mode=max
 
-      - name: Docker Hub Description
-        uses: peter-evans/dockerhub-description@v2
-        with:
-          username: ${{ secrets.DOCKERHUB_USERNAME }}
-          password: ${{ secrets.DOCKERHUB_TOKEN }}
-          repository: ${{ env.IMAGE }}
-          readme-filepath: ./README.md
-          short-description: ${{ github.event.repository.description }}
+      # - name: Docker Hub Description
+      #   uses: peter-evans/dockerhub-description@v2
+      #   with:
+      #     username: ${{ secrets.DOCKERHUB_USERNAME }}
+      #     password: ${{ secrets.DOCKERHUB_TOKEN }}
+      #     repository: ${{ env.IMAGE }}
+      #     readme-filepath: ./README.md
+      #     short-description: ${{ github.event.repository.description }}
